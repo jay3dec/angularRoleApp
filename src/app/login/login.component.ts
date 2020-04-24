@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   authenticateUser(userName){
-    localStorage.setItem("user", userName);
+    sessionStorage.setItem("user", userName);
     if(userName == "admin"){
       this.router.navigate(['/admin']);
     } else if(userName == "manager"){ 
