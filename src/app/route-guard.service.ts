@@ -9,7 +9,7 @@ export class RouteGuardService implements CanActivate {
   constructor() { }
 
   public canActivate(route: ActivatedRouteSnapshot){
-    let user = localStorage.getItem('user');
+    let user = sessionStorage.getItem('user');
     if(user == "admin"){
       return true;
     }
